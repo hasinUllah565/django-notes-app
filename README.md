@@ -8,8 +8,8 @@ This is a simple notes app built with React and Django.
 
 ## Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/hassankhan565/django-notes-app.git
+  
+  ` git clone https://github.com/hassankhan565/django-notes-app.git`
 
 
 -----------------------------------------
@@ -180,8 +180,8 @@ pipeline {
 # step 8: Push Docker Image to Docker Hub
 
 --> 1: Login to Docker Hub
-```bash
-docker login
+
+`docker login`
 
 ![docker login](images/17.png)
 
