@@ -66,32 +66,31 @@ View the Dockerfile contents:
 
 Before installing Jenkins, install Java because Jenkins requires Java to run.
 
-```bash
-sudo apt update
-sudo apt install openjdk-11-jdk -y
-java -version
+`sudo apt update`
+`sudo apt install openjdk-11-jdk -y`
+`java -version`
 
 # Install Jenkins
 #Import the GPG key and Install Jenkins
 
-```bash
+
 #Import the GPG key
-curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+`curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null`
 
 #Add Jenkins repository
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+`echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null`
 
 #Update package list
-sudo apt update
+`sudo apt update`
 
 #Install Jenkins
-sudo apt install jenkins -y
+`sudo apt install jenkins -y`
 
 #Start Jenkins service
-sudo systemctl start jenkins
+`sudo systemctl start jenkins`
 
 #Check Jenkins status
-sudo systemctl status jenkins
+`sudo systemctl status jenkins`
 
 ![build Dockerfile](images/9.png)
 ----------------------------------
@@ -106,7 +105,7 @@ sudo systemctl status jenkins
 
 - Open your web browser and go to:  
 
-http://<EC2-Public-IP>:8080
+`http://<EC2-Public-IP>:8080`
 
 Jenkins Initial Admin Password
 The Jenkins initial admin password is stored at:
@@ -292,6 +291,11 @@ A webhook is a way for one application to automatically send real-time data or n
 
 Now, whenever you commit something to the GitHub repository, it will automatically trigger Jenkins to build and run your application
 
+![commit success](images/23.png)
+
+
+# you can wrte in resume 
+Developed and deployed a Django web app with automated CI/CD pipeline using Jenkins and Docker; GitHub webhook triggers build and deployment.
 
 ## Author
 
