@@ -1,6 +1,26 @@
+version: '3.8'
+
 services:
   web:
     build: .
     container_name: django_web
     ports:
       - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=1
+    depends_on:
+      - db
+
+  # Uncomment if using MySQL
+  # db:
+  #   image: mysql:8
+  #   container_name: django_db
+  #   environment:
+  #     MYSQL_DATABASE: mydb
+  #     MYSQL_USER: user
+  #     MYSQL_PASSWORD: password
+  #     MYSQL_ROOT_PASSWORD: rootpassword
+  #   ports:
+  #     - "3306:3306"
