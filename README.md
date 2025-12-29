@@ -191,10 +191,11 @@ go to `Jenkins Dashboard` → `Manage Jenkins → Manage` `Credentials`
 ![credential in jenkins](images/16.png)
 
 ## add jenkins user in docker group
-`sudo usermod -aG docker jenkins`
-`sudo systemctl restart jenkins`
+-->`sudo usermod -aG docker jenkins`
 
-![docker login](images/17.png)
+-->`sudo systemctl restart jenkins`
+
+![add jenkins user in docker group](images/17.png)
 -------------------------------------
 # step8: push to docker pipeline
 
